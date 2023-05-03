@@ -45,7 +45,7 @@ export default class UvVentasDataService extends Component {
             .child(file.name)
             .getDownloadURL()
             .then((myurl) =>  { 
-                  this.state.url=myurl;      
+                  this.setState().url=myurl;      
             });
 
     });
