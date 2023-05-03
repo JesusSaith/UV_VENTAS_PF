@@ -2,6 +2,8 @@ import firebase from "../firebase";
 
 const db = firebase.collection("/UV-Ventas");
 
+
+
 class UvVentasDataService {
   getAll() {
     return db;
@@ -19,5 +21,6 @@ class UvVentasDataService {
     return db.doc(id).delete();
   }
 }
+const servi = new UvVentasDataService ()
 
-export default new UvVentasDataService();
+export default  servi;
