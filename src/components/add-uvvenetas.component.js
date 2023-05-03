@@ -40,13 +40,13 @@ export default class UvVentasDataService extends Component {
     const uploadTask = storage.ref('/images/'+file.name ).put(file);
 
     uploadTask.on("state_changed", console.log, console.error, () =>  {
-       storage
+      storage
             .ref("images")
             .child(file.name)
             .getDownloadURL()
             .then((myurl) =>  { 
-                    this.state.url=myurl;      
-             });
+                  this.state.url=myurl;      
+            });
 
     });
 
