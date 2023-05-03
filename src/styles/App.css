@@ -1,0 +1,129 @@
+body {
+  background-image: url('../images/acuarela.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #333;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para los enlaces */
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para los encabezados */
+.Ventas {
+  
+  text-align: center;
+  
+}
+
+/* Estilos para los párrafos */
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* Estilos para las listas */
+ul, ol {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  padding-left: 2rem;
+}
+
+/* Estilos para los elementos de la lista */
+li {
+  margin-bottom: 0.5rem;
+}
+
+/* Estilos para las secciones */
+section {
+  padding: 2rem;
+}
+
+/* Estilos para el pie de página */
+footer {
+  background-color: #eee;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Estilos para los botones */
+button, input[type="submit"] {
+  background-color: #0077cc;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+button:hover, input[type="submit"]:hover {
+  background-color: #005ea2;
+}
+
+
+.App {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  text-shadow: 1px 1px 0 #fff, 2px 2px 0 rgba(0, 0, 0, 0.1);
+  margin-top: 2rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.05rem;
+  text-transform: uppercase;
+  
+
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+

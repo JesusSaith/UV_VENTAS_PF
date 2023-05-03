@@ -1,0 +1,60 @@
+.CommentSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.CommentSection h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.CommentSection form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.CommentSection label {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.CommentSection textarea {
+  width: 100%;
+  min-height: 80px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.CommentSection button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.CommentSection button[type="submit"]:hover {
+  background-color: #0069d9;
+}
+
+.CommentSection div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.CommentSection p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  text-align: center;
+  width: 100%;
+}
