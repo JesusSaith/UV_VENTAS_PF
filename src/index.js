@@ -5,18 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter } from "react-router-dom";
 
-const cors = require ('cors')
-const express = require ('express')
-const {kafka} = require ('kafkajs')
-
-const kafka = new kafka({
-  clientId: 'my app',
-  brokers: [
-    'my-kafka-0.my-kafka-headless.jesussaith.svc.cluster.local:9092'
-  ]
-  
-
-})
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
