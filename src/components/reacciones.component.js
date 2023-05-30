@@ -15,7 +15,7 @@ function saveLike(e, status) {
 
   console.log(JSON.stringify(data));
 
-  KafkaService.reaction(reaction);
+  KafkaService.reaction(Reactions);
   e.preventDefault();
 }
 
