@@ -15,7 +15,7 @@ function saveLike(e, status) {
 
   console.log(JSON.stringify(data));
 
-  KafkaService.reaction("i-love-adsoftsito");
+  KafkaService.reaction(reaction);
   e.preventDefault();
 }
 
