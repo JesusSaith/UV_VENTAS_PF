@@ -1,6 +1,6 @@
 
 class KafkaService {
-   //url = 'https://your-kafka-express-service-kafka-adsoftsito.cloud.okteto.net/';
+   //url = 'https://kafka-express-deployment-service-jesussaith.cloud.okteto.net/';
    url = 'https://kafka-express-deployment-service-jesussaith.cloud.okteto.net/';
   
    reaction = async (name) => {
