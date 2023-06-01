@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "../styles/comentario.css";
+import KafkaService from "../services/kafka.service";
 
-function CommentSection() {
+
+function CommentSection(props) {
   const [comment, setComment] = useState("");
   const [commentsList, setCommentsList] = useState([]);
 
@@ -9,7 +11,23 @@ function CommentSection() {
     e.preventDefault();
     setCommentsList([...commentsList, comment]);
     setComment("");
+    saveComment(1, "hola");
+    
   }
+
+  const saveComment=(status, comment)=> {
+  
+    let data = {
+      id: 0,
+      status: status
+    };
+  
+    console.log(JSON.stringify(data));
+  
+    KafkaService.comment(props.email,props.id,comment);
+  
+  };
+  
 
   return (
     <div>

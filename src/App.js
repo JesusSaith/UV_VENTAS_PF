@@ -9,6 +9,7 @@ import AddUvVentas from "./components/add-uvvenetas.component";
 import UvVentasList from "./components/uvvenetas-list.component";
 import Home from "./components/home.component";
 
+import Login from './components/login.component';
 import ImageGallery from "./components/images.component";
 
 class App extends Component {
@@ -33,6 +34,11 @@ class App extends Component {
                 Add
               </Link>
             </li>
+            <li className="nav-item">
+              <Link to={"/login"} className="nav-link">
+                Login
+              </Link>
+            </li>
           </div>
         </nav>
 
@@ -42,6 +48,7 @@ class App extends Component {
             <Route exact path="/" element={<UvVentasList/>} />
             <Route exact path="add" element={<AddUvVentas/>} />
             <Route exact path="home" element={<Home/>} />
+            <Route path="login" element={<Login/>} />
           </Routes>
 
           
@@ -49,7 +56,7 @@ class App extends Component {
 
       <div className="App">
       <h1>Productos</h1>
-      <ImageGallery />
+      <ImageGallery email={this.props.email} />
     </div>
 
 

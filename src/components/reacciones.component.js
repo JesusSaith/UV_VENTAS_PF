@@ -5,21 +5,7 @@ import { faThumbsUp, faHeart, faAngry } from '@fortawesome/free-solid-svg-icons'
 import KafkaService from "../services/kafka.service";
 
 
-
-function saveLike(e, status) {
-  
-  let data = {
-    id: 0,
-    status: status
-  };
-
-  console.log(JSON.stringify(data));
-
-  KafkaService.reaction("i-love-saith");
-  e.preventDefault();
-}
-
-function Reactions() {
+function Reactions(props) {
     const [reaction, setReaction] = useState(null);
     const [reactionsCount, setReactionsCount] = useState({
       like: 0,
@@ -39,12 +25,25 @@ function Reactions() {
         [type]: reactionsCount[type] + 1
       });
     };
+
+    const saveLike=(status, reaction)=> {
+  
+      let data = {
+        id: 0,
+        status: status
+      };
+    
+      console.log(JSON.stringify(data));
+    
+      KafkaService.reaction(props.email,props.id,reaction);
+    
+    };
   
     return (
       <div>
         <button
           className={reaction === "like" ? "active" : ""}
-            onClick={() => handleReactionClick("like")}
+            onClick={() => {handleReactionClick("like"); saveLike ( 1,"like" )}}
         >
           <FontAwesomeIcon icon={faThumbsUp} /> Like
         </button>
@@ -53,7 +52,7 @@ function Reactions() {
             onClick={(e) => {
               handleReactionClick("love")
               e.preventDefault();
-                    saveLike(e, 1)
+                    saveLike(1, "love")
           }
         }
               
@@ -62,7 +61,7 @@ function Reactions() {
         </button>
         <button
             className={reaction === "angry" ? "active" : ""}
-            onClick={() => handleReactionClick("angry")}
+            onClick={() => {handleReactionClick("angry");saveLike(1, "angry") }}
         >
           <FontAwesomeIcon icon={faAngry} /> Me enoja
         </button>

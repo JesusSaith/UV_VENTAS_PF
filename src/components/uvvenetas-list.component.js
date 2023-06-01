@@ -86,6 +86,7 @@ export default class uvventasList extends Component {
           {currentTutorial ? (
             <Tutorial
               tutorial={currentTutorial}
+              email={"yisuscond@gmail.com"}
               refreshList={this.refreshList}
             />
           ) : (

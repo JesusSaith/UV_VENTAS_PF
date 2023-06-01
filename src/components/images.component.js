@@ -7,7 +7,7 @@ import CommentSection from './comentarios.component';
 
 
 
-const ImageGallery = () => {
+const ImageGallery = (props) => {
   const [imageUrls, setImageUrls] = useState([]);
 
   useEffect(() => {
@@ -32,8 +32,8 @@ const ImageGallery = () => {
       {imageUrls.map((url) => (
         <div className="image-container" key={url}>
           <img src={url} alt="Imagen" />
-          <div className="reactions">
-            <Reactions />
+          <div className="reaction">
+            <Reactions id={url} email={"yisuscond@gmail.com"} />
           </div>
           <div className="comments">
             <CommentSection />
